@@ -1,0 +1,39 @@
+ECOMMERCEWEB/
+├── api/
+│   └── (API-related files or endpoints)
+├── dist/
+│   └── (Production build files)
+├── node_modules/
+│   └── (Installed dependencies)
+├── public/
+│   ├── images/
+│   │    └── All images exist here
+│   │
+│	└── vite.svg
+├── src/
+│   ├── addToCart.js
+│   ├── formatIndianCurrency.js
+│   ├── getCartProductFromLocalStorage.js
+│   ├── highlightActiveLink.js
+│   ├── homeProductCard.js
+│   ├── homeQuantityToggle.js
+│   ├── incrementDecrement.js
+│   ├── index.js
+│   ├── loadSections.js
+│   ├── parseIndianCurrencyToNumber.js
+│   ├── removeProductFromAddToCart.js
+│   ├── showAddToCartCard.js
+│   ├── showToast.js
+│   ├── SumOfTotalCartProduct.js
+│   └── updateCartValueToUI.js
+│ 
+├── .gitignore
+├── about.html
+├── addToCart.html
+├── contact.html
+├── index.html
+├── product.html
+├── style.css
+├── package.json
+├── package-lock.json
+└── vite.config.js
