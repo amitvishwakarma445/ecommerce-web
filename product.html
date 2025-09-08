@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/ecommerce-web/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JS Ecom Web</title> <!--main.js me import kiye hai-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script type="module" crossorigin src="/ecommerce-web/assets/showToast-B590DNNP.js"></script>
+  <script type="module" crossorigin src="/ecommerce-web/assets/index-CgbqCHIc.js"></script>
+  <link rel="stylesheet" crossorigin href="/ecommerce-web/assets/showToast-BTtoYRM-.css">
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header class="section-navbar">
+    <section class="top_txt">
+      <div class="head container">
+        <div class="head_txt">
+          <p>Free shipping, 30 days return or refund gurantee</p>
+        </div>
+        <div class="sign_in_up">
+          <a href="#">SIGN IN</a>
+          <a href="#">SIGN UP</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="navbar-brand">
+        <a href="index.html">
+          <img src="./images/electraStore.png" alt="STORE LOGO" class="logo" width="80%" height="auto" />
+        </a>
+      </div>
+
+      <nav class="navbar">
+        <ul>
+          <li class="nav-item"><a href="/">Home</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="product.html">Products</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <a href="./addToCart.html" class="nav-link add-to-cart-button" id="cartValue">
+              <i class="fa-solid fa-cart-shopping"></i> 0
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- start Extra Product section -->
+  <section class="section-extra-product">
+    <div class="container grid grid-three--cols">
+      <!-- 1st column -->
+      <div class="div-extra grid grid-two--cols">
+        <div class="extra-text">
+          <p>New year sale</p>
+          <h3>Get extra 50% off</h3>
+          <a href="./products.html">Show now</a>
+        </div>
+        <div class="extra-img extra-laptop">
+          <img src="./images/laptop.png" alt="laptop image">
+        </div>
+      </div>
+
+      <!-- 2nd column -->
+      <div class="div-extra grid grid-two--cols">
+        <div class="extra-text">
+          <p>New year sale</p>
+          <h3>Get extra 50% off</h3>
+          <a href="./products.html">Show now</a>
+        </div>
+        <div class="extra-img extra-laptop">
+          <img src="./images/headphoneEcom.png" alt="headphone image" />
+        </div>
+      </div>
+
+      <!-- 3rd column -->
+      <div class="div-extra grid grid-two--cols">
+        <div class="extra-text">
+          <p>New year sale</p>
+          <h3>Get extra 50% off</h3>
+          <a href="./products.html">Show now</a>
+        </div>
+        <div class="extra-img extra-laptop">
+          <img src="./images/mobiles.png" alt="mobile image" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Start product section -->
+  <section class="section-products">
+    <div class="container" style="padding: 9.6rem 2.4rem 2.4rem;">
+      <h2 class="section-common-heading">Checkout into store</h2>
+    </div>
+    <section class="container" style="padding: 1.5rem 2.4rem 9.6rem;">
+      <div id="productContainer">
+        <!-- template render here -->
+      </div>
+    </section>
+  </section>
+
+  <!-- product template section (place inside the Product section using javascript)-->
+  <template id="productTemplate">
+    <div class="cards" id="cardValue">
+      <article class="information [card]">
+        <span class="category"></span>
+        <div class="imageContainer">
+          <img class="productImage" src="" alt="" />
+        </div>
+
+        <h2 class="productName"></h2>
+        <div class="productRating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+
+        <p class="productDescription"></p>
+
+        <div class="productPriceElement">
+          <p class="productPrice"></p>
+          <p class="productActualPrice"></p>
+        </div>
+        <div class="productStockElement">
+          <p class="productProperty">Total Stock Available:</p>
+          <p class="productStock"></p>
+        </div>
+        <div class="productQuantityElement">
+          <p class="productProperty">Quantity(prices)</p>
+          <div class="stockElement">
+            <button class="cartIncrement">+</button>
+            <p class="productQuantity">1</p>
+            <button class="cartDecrement">-</button>
+          </div>
+        </div>
+        <button class="add-to-cart-button">
+          <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+        </button>
+      </article>
+    </div>
+  </template>
+
+
+  <!--  Start footer Section  -->
+  <footer class="section-footer">
+        <div class="footer-container container">
+            <div class="content_1">
+                <img src="./images/electraStore.png" alt="logo" />
+                <p>
+                    Welcome to Thapa EcomStore, your ultimate destination for
+                    cutting-edge gadgets!
+                </p>
+                <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards" />
+            </div>
+            <div class="content_2">
+                <h4>SHOPPING</h4>
+                <a href="#">Computer Store</a>
+                <a href="#">Laptop Store</a>
+                <a href="#">Accessories</a>
+                <a href="#">Sales & Discount</a>
+            </div>
+            <div class="content_3">
+                <h4>Experience</h4>
+                <a href="./contact.html">Contact Us</a>
+                <a href="" target="_blank">Payment Method</a>
+                <a href="" target="_blank">Delivery</a>
+                <a href="" target="_blank">Return and Exchange</a>
+            </div>
+            <div class="content_4">
+                <h4>NEWSLETTER</h4>
+                <p>Be the first to know about new<br />arrivals, sales & promos!</p>
+                <div class="f-mail">
+                    <input type="email" placeholder="Your Email" />
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <hr />
+            </div>
+        </div>
+        <div class="f-design">
+            <div class="f-design-txt">
+                <p>Design and Code by vishwCode technical</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+  <!-- All Operations Will be occurs -->
+</body>
+
+</html>
