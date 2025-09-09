@@ -1,3 +1,5 @@
+this is  the final Code Structure 
+
 ECOMMERCEWEB/
 ├── api/
 │   └── (API-related files or endpoints)
