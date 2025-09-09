@@ -279,6 +279,7 @@ textarea:focus-visible {
     /* reasonable padding */
   }
 }
+
 .section-navbar .navbar ul li a.active {
   color: var(--main-color);
   /* Changes the text color to your main color */
@@ -355,13 +356,13 @@ main .section-hero {
     line-height: 1.5;
     initial-letter: -0.2rem;
     text-transform: capitalize;
-    color: #003b99;
+    /* color: #003b99; */
     font-family: "Jost";
   }
 
   & .hero-para {
     margin: 2rem 0 4.2rem 0;
-    color: white;
+    /* color: white; */
   }
 }
 
@@ -370,6 +371,7 @@ main .section-hero {
   height: auto;
   transform: scaleX(-1);
 }
+
 /* ================================= */
 .section-hero--content {
   background: rgba(255, 255, 255, 0.08);
@@ -392,14 +394,14 @@ main .section-hero {
   font-size: 5rem;
   line-height: 1.4;
   text-transform: capitalize;
-  color: #ffffff;
+  color: #013ea0;
   font-family: 'Orbitron', sans-serif;
   text-shadow: 0.4rem 0.4rem 1rem #003b99;
 }
 
 .hero-para {
   margin: 2rem 0 3rem 0;
-  color: #e0e0e0;
+  color: #505062;
   font-size: 1.6rem;
   line-height: 1.8;
 }
@@ -429,6 +431,7 @@ main .section-hero {
   border-radius: 1rem;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
 }
+
 /* ========================================================= */
 /***** End Hero Section *****/
 
@@ -579,8 +582,10 @@ main .section-hero {
   align-items: end;
 }
 
-.section-why--choose {
-  & .section-common--heading, & .section-common--subheading{
+.section-why--choose, .section-contact {
+
+  & .section-common--heading,
+  & .section-common--subheading {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -1149,6 +1154,8 @@ footer {
   }
 }
 
+/* ========================================================================== */
+
 @media (width <=1100px) {
   .grid-four--cols {
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
@@ -1199,7 +1206,8 @@ footer {
   }
 }
 
-@media (width <=980px) {
+/* ========================================================================== */
+@media (width <=988px) {
   body {
     padding: 0 0.6rem;
   }
@@ -1262,7 +1270,9 @@ footer {
   }
 }
 
-@media (width <=768px) {
+/* ========================================================================== */
+
+@media (width < 768px) {
   .grid-two--cols {
     grid-template-columns: 1fr;
   }
@@ -1343,8 +1353,10 @@ footer {
   }
 }
 
+/* ========================================================================== */
+
 /* Media Queries for a Single-Row Mobile Approach */
-@media (max-width: 998px) {
+@media (max-width: 988px) {
   .section-navbar .container {
     padding: 1rem;
     flex-wrap: wrap;
@@ -1374,6 +1386,49 @@ footer {
   .top_txt .sign_in_up {
     gap: 1rem;
     /* Further reduces the gap */
+  }
+
+  body {
+    padding: 0 0.6rem;
+  }
+
+  .section-hero .grid-two--cols {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    /* Reduce the gap between the image and content */
+  }
+
+  .section-hero .section-hero--content {
+    order: 2;
+    text-align: center;
+    padding: 1rem;
+    /* Reduce padding to save space */
+  }
+
+  .section-hero .section-hero-image {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-hero-image img {
+    max-width: 290px;
+    /* Further reduce the max-width of the image */
+    width: 100%;
+    height: auto;
+  }
+
+  .section-hero .hero-heading {
+    font-size: 3rem;
+    /* Reduce font size for the heading */
+    line-height: 1.2;
+  }
+
+  .section-hero .hero-para {
+    font-size: 1.4rem;
+    /* Reduce font size for the paragraph */
+
   }
 }
 
@@ -1443,9 +1498,15 @@ footer {
     margin-top: 1rem;
   }
 
+  .productCartTotalElem {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-top: 3.2rem;
+  }
+
   /* Make the total summary responsive */
   .productCartTotalElement {
-    width: 100%;
     max-width: 100%;
     margin-top: 2rem;
     box-shadow: none;
